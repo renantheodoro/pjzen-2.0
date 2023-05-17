@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <metainfo>
+    <template v-slot:title="{ content }">{{
+      content ? `${content} | SITE_NAME` : `SITE_NAME`
+    }}</template>
+  </metainfo>
+  <Header></Header>
+  <router-view></router-view>
+  <Footer></Footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "@/presentation/modules/Header.vue";
+import Footer from "@/presentation/modules/Footer.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  methods: {},
+
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>

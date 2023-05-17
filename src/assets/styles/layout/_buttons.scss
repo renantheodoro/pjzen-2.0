@@ -1,0 +1,40 @@
+.button {
+  border-radius: to-rem(10px);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 400;
+  font-size: to-rem(18px);
+  line-height: to-rem(25px);
+  text-align: center;
+
+  padding: to-rem(12px) to-rem(38px);
+
+  &.button--primary {
+    border: 1px solid palette("blue");
+    background-color: palette("blue");
+    color: palette("white");
+
+    transition: ease 0.3s;
+
+    &:hover {
+      background-color: palette("white");
+      color: palette("blue");
+    }
+  }
+
+  &.button--outline {
+    border: 1px solid palette("blue");
+    background-color: transparent;
+    color: palette("blue");
+
+    transition: ease 0.3s;
+
+    &:hover {
+      background-color: palette("blue");
+      color: palette("white");
+    }
+  }
+}
