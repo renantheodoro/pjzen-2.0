@@ -107,8 +107,9 @@ dt a {
   font-weight: 400;
 
   @media screen and (min-width: breakpoint("tablet")) {
-    font-size: to-rem(28px);
-    line-height: to-rem(40px);
+    font-weight: 800;
+    font-size: to-rem(40px);
+    line-height: to-rem(49px);
   }
 }
 
@@ -120,9 +121,8 @@ dt a {
   margin-bottom: to-rem(8px);
 
   @media screen and (min-width: breakpoint("tablet")) {
-    font-size: to-rem(21px);
-    line-height: to-rem(24px);
-    margin-bottom: to-rem(21px);
+    font-size: to-rem(30px);
+    line-height: to-rem(37px);
   }
 }
 

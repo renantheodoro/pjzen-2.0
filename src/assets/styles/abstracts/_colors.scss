@@ -4,26 +4,54 @@
 /// @require {function} palette
 
 $palette: (
-  "white": (
-    "base": #fff,
-  ),
+  // Base colors
+  "white":
+    (
+      "base": #fff,
+    ),
   "black": (
     "base": #000,
   ),
   "blue": (
-    "base": #4380E5,
+    "base": #4380e5,
+  ),
+  "purple": (
+    "base": #5956fe,
+  ),
+  "orange": (
+    "base": #ee783c,
   ),
   "primary": (
-    "base": #4380E5,
+    "base": #4380e5,
   ),
   "link": (
-    "base": #4380E5,
+    "base": #4380e5,
   ),
   "text": (
     "base": #353535,
-    "light": #4B4B4B
+    "light": #4b4b4b,
+    "extra-light": #949494,
+    "blue": #3782EF,
   ),
   "background": (
-    "base": #EEF6F6,
+    "base": #eef6f6,
   ),
+  "button": (
+    "primary": #4380E5,
+    "primary-hover": #004FC2,
+    "orange": #ee783c,
+    "orange-hover": #A53800,
+    "blue": #3782EF,
+    "blue-hover": #004FC2,
+    "blue-dark": #2B66BD,
+    "blue-dark-hover": #002459,
+    "blue-darkest": #3B5170,
+    "blue-darkest-hover": #051224,
+  ),
+
+  // Project colors
+  "icon":
+    (
+      "background": #d9edf8,
+    )
 );

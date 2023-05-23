@@ -1,0 +1,10 @@
+.characters-carousel {
+  .carousel .carousel__slide {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        margin-top: to-rem(20px);
+    }
+  }
+}

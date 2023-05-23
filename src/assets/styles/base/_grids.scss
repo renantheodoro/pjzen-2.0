@@ -301,5 +301,7 @@ $column-quantity-desktop: 12;
 
   @media screen and (min-width: breakpoint("desktop")) {
     max-width: 1272px;
+
+    margin: 0 auto;
   }
 }

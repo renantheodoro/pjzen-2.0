@@ -1,8 +1,12 @@
 import { createApp } from "vue";
-import * as VueRouter from "vue-router";
-import routes from "./routes";
+
+// CSS import
+import "./assets/styles/index.scss";
+import "vue3-carousel/dist/carousel.css";
 
 import App from "./App.vue";
+import * as VueRouter from "vue-router";
+import routes from "./routes";
 import VueLazyload from "vue-lazyload";
 
 // Route definition
@@ -29,17 +33,19 @@ app.config.globalProperties.$getSvgIconUrl = (img) => {
   return images("./" + img + ".svg");
 };
 
+app.config.globalProperties.$getSvgUrl = (img) => {
+  var images = require.context("@/assets/images/svg/", false, /\.svg$/);
+  return images("./" + img + ".svg");
+};
+
 app.config.globalProperties.$getPngUrl = (img) => {
   var images = require.context("@/assets/images/png/", false, /\.png$/);
   return images("./" + img + ".png");
 };
 
+// App Usages
 app.use(router);
 app.use(VueLazyload);
 
 // App mount
 app.mount("#app");
-
-// CSS Libs
-import "materialize-css/dist/css/materialize.min.css";
-import "./assets/styles/index.scss";
