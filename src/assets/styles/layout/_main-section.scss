@@ -1,37 +1,60 @@
 .main-section {
-  padding: to-rem(140px) 0 to-rem(180px);
+  padding-bottom: to-rem(90px);
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    padding: to-rem(140px) 0 to-rem(180px);
+  }
 
   position: relative;
 
-  &::after {
-    content: "";
+  @media screen and (min-width: breakpoint("desktop")) {
+    &::after {
+      content: "";
 
-    display: block;
+      display: block;
 
-    background-image: url("@/assets/images/svg/home-main_section_line.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    position: absolute;
-    z-index: 2;
-    bottom: 90px;
-    right: -80px;
-    width: 630px;
-    height: 60px;
+      background-image: url("@/assets/images/svg/home-main_section_line.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+
+      position: absolute;
+      z-index: 2;
+      bottom: 90px;
+      right: -80px;
+      width: 630px;
+      height: 60px;
+    }
   }
 
   .eclipse--orange {
-    width: to-rem(710px);
-    height: to-rem(556px);
-    left: -120px;
-    bottom: -120px;
+    width: to-rem(309px);
+    height: to-rem(243px);
+    left: -22%;
+    top: 92px;
   }
 
   .eclipse--green {
-    width: to-rem(806px);
-    height: to-rem(781px);
-    top: -180px;
-    right: -60px;
+    width: to-rem(352px);
+    height: to-rem(241px);
+    top: -46px;
+    left: 50%;
+  }
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    .eclipse--orange {
+      width: to-rem(710px);
+      height: to-rem(556px);
+      top: auto;
+      left: -120px;
+      bottom: -120px;
+    }
+
+    .eclipse--green {
+      width: to-rem(806px);
+      height: to-rem(781px);
+      top: -180px;
+      right: -60px;
+    }
   }
 
   .container {
@@ -41,17 +64,37 @@
 
   p {
     font-weight: 400;
-    font-size: to-rem(36px);
-    line-height: to-rem(44px);
-
+    font-size: to-rem(24px);
+    line-height: to-rem(30px);
     color: palette("text", "light");
+    margin-bottom: to-rem(52px);
 
-    margin-bottom: to-rem(63px);
+    @media screen and (min-width: breakpoint("desktop")) {
+      font-size: to-rem(36px);
+      line-height: to-rem(44px);
+      margin-bottom: to-rem(63px);
+    }
   }
 
   .button {
+    width: 100%;
+    margin-bottom: 1rem;
+
     @media screen and (min-width: breakpoint("desktop")) {
+      width: auto;
       margin-right: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    display: block;
+    margin-top: to-rem(56px);
+
+    max-width: 100%;
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      margin-top: 0;
     }
   }
 }

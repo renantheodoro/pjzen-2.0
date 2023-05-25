@@ -9,6 +9,8 @@ import * as VueRouter from "vue-router";
 import routes from "./routes";
 import VueLazyload from "vue-lazyload";
 
+import { Collapse } from "vue-collapsed";
+
 // Route definition
 const router = new VueRouter.createRouter({
   linkActiveClass: "active",
@@ -46,6 +48,9 @@ app.config.globalProperties.$getPngUrl = (img) => {
 // App Usages
 app.use(router);
 app.use(VueLazyload);
+
+// App Components
+app.component(Collapse, "Collapse");
 
 // App mount
 app.mount("#app");

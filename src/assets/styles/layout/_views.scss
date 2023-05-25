@@ -5,9 +5,13 @@
 
 .eclipse {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 
-  filter: blur(185px);
+  filter: blur(79.5px);
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    filter: blur(185px);
+  }
 
   &.eclipse--orange {
     opacity: 0.8;
@@ -21,7 +25,7 @@
 
   &.eclipse--pink {
     opacity: 0.6;
-    background: rgba(254, 214, 218, 0.5);;
+    background: rgba(254, 214, 218, 0.5);
   }
 
   &.eclipse--purple {
@@ -32,10 +36,9 @@
 
 .section-default {
   $sectionPaddingDesktop: 104px;
-  $sectionPaddingMobile: 107px;
+  $sectionPaddingMobile: 90px;
 
   position: relative;
-  z-index: 2;
   padding: #{$sectionPaddingMobile / 2} 0;
 
   .container {
@@ -44,7 +47,11 @@
   }
 
   .section-default__title {
-    margin-bottom: to-rem(80px);
+    margin-bottom: to-rem(32px);
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      margin-bottom: to-rem(80px);
+    }
   }
 
   &.section-default--full-padding {
@@ -96,15 +103,33 @@
   display: flex;
   align-items: center;
 
-  margin-bottom: to-rem(40px);
+  margin-bottom: to-rem(20px);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    margin-bottom: to-rem(40px);
+  }
 
   .item-content__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: palette("icon", "background");
-    padding: to-rem(10px);
     border-radius: to-rem(8px);
+    padding: to-rem(8px);
     margin-right: to-rem(24px);
-    width: to-rem(46px);
-    height: to-rem(42px);
+    width: to-rem(37px);
+    height: to-rem(34px);
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      padding: to-rem(10px);
+      width: to-rem(46px);
+      height: to-rem(42px);
+    }
 
     img {
       display: block;
@@ -116,8 +141,13 @@
   .item-content__text {
     width: 100%;
     font-weight: 400;
-    font-size: to-rem(20px);
-    line-height: to-rem(25px);
+    font-size: to-rem(14px);
+    line-height: 1rem;
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      font-size: to-rem(20px);
+      line-height: to-rem(25px);
+    }
   }
 }
 
@@ -225,12 +255,16 @@
 
 .section-default__card {
   background-color: palette("white");
-  padding: to-rem(50px);
+  padding: to-rem(30px) to-rem(22px);
 
   border-radius: to-rem(10px);
 
   position: relative;
   z-index: 2;
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    padding: to-rem(50px);
+  }
 
   &::after {
     content: "";
@@ -252,10 +286,19 @@
   }
 
   h3 {
-    font-size: to-rem(32px);
-    line-height: to-rem(40px);
+    font-size: to-rem(28px);
+    line-height: to-rem(35px);
+    text-align: left;
 
-    margin-bottom: to-rem(40px);
+    margin-bottom: to-rem(20px);
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      margin-bottom: to-rem(40px);
+
+      font-size: to-rem(32px);
+      line-height: to-rem(40px);
+      margin-bottom: to-rem(50px);
+    }
   }
 }
 
@@ -264,13 +307,77 @@
   flex-direction: column;
   align-items: center;
 
-  h2 {
-    font-size: to-rem(48px);
+  .call-to-action__title {
+    font-size: to-rem(36px);
+    font-weight: 800;
+    line-height: to-rem(44px);
     text-align: center;
-    line-height: 59px;
+
+    color: #353535;
+
+    position: relative;
+
+    margin-bottom: 46px;
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      font-size: to-rem(48px);
+      text-align: center;
+      line-height: 59px;
+      margin-bottom: 39px;
+    }
+
+    .call-to-action__title__content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .call-to-action__title__content__hightlight {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        bottom: -7px;
+        left: -30px;
+
+        content: "";
+
+        width: to-rem(226px);
+        height: to-rem(50px);
+        z-index: 1;
+
+        background-image: url("@/assets/images/svg/call-to-action-bg-title.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media screen and (min-width: breakpoint("desktop")) {
+          width: to-rem(274px);
+          height: to-rem(60px);
+
+          bottom: -7px;
+          right: -17px;
+        }
+      }
+
+      .call-to-action__title__content__hightlight__text {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+      }
+    }
   }
 
   .button {
-    margin-bottom: to-rem(120px);
+    margin-bottom: to-rem(58px);
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      margin-bottom: to-rem(120px);
+    }
   }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
 }

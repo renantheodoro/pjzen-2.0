@@ -87,8 +87,10 @@ dt a {
 @mixin heading-1 {
   margin-bottom: calc((#{$leading} * 1rem) / 1.5);
 
-  font-size: to-rem(24px);
-  line-height: to-rem(27px);
+  font-size: to-rem(36px);
+  line-height: to-rem(44px);
+
+  font-weight: 700;
 
   @media screen and (min-width: breakpoint("tablet")) {
     font-size: to-rem(68px);
@@ -101,10 +103,10 @@ dt a {
 @mixin heading-2 {
   margin-bottom: to-rem(34px);
 
-  font-size: to-rem(24px);
-  line-height: to-rem(28px);
+  font-size: to-rem(32px);
+  line-height: to-rem(40px);
 
-  font-weight: 400;
+  font-weight: 800;
 
   @media screen and (min-width: breakpoint("tablet")) {
     font-weight: 800;

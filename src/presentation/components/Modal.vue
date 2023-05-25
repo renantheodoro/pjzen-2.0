@@ -1,10 +1,17 @@
 <template lang="">
-  <div :class="{ active: isModalOpen }" class="modal-overlay" @click="close()"></div>
+  <div
+    :class="{ active: isModalOpen }"
+    class="modal-overlay"
+    @click="close()"
+  ></div>
   <div :class="{ active: isModalOpen }" class="modal">
     <a class="modal__close-button" @click="close()">
       <img src="@/assets/images/svg/icons/icon-times.svg" alt="Icon times" />
     </a>
-    <slot />
+    <video v-if="isModalOpen" ref="video" controls autoplay>
+      <slot />
+      Your browser does not support the video tag.
+    </video>
   </div>
 </template>
 <script>

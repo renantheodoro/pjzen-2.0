@@ -3,23 +3,39 @@
   $sectionPaddingMobile: 107px;
 
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding: #{$sectionPaddingMobile / 2} 0;
+
+  @media (max-width: breakpoint("desktop")) {
+    padding-top: 0;
+  }
 
   .footer__logo {
     display: block;
 
     margin-bottom: to-rem(26px);
+
+    @media (max-width: breakpoint("desktop")) {
+      width: to-rem(116px);
+      height: to-rem(32px);
+      object-fit: contain;
+    }
   }
 
   h2 {
-    font-size: to-rem(40px);
+    font-size: to-rem(20px);
+
     line-height: 107.2%;
     font-weight: 400;
 
-    padding-left: 50px;
+    padding-left: 35px;
 
     margin-bottom: to-rem(33px);
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      font-size: to-rem(40px);
+      padding-left: 50px;
+    }
 
     strong {
       font-weight: 800;
@@ -38,34 +54,63 @@
   .link {
     color: #363636;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 107.2%;
     text-transform: uppercase;
 
     display: block;
 
-    margin-bottom: to-rem(20px);
+    margin-bottom: to-rem(12px);
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      font-size: 20px;
+      margin-bottom: to-rem(20px);
+    }
 
     &:not(.link--title):hover {
       text-decoration: underline;
     }
 
     &.link--title {
-      font-size: 18px;
+      font-size: 14px;
 
-      margin-bottom: to-rem(40px);
+      margin-top: 22px;
+      margin-bottom: to-rem(24px);
+
+      @media screen and (min-width: breakpoint("desktop")) {
+        font-size: 18px;
+        margin-top: 0px;
+        margin-bottom: to-rem(40px);
+      }
     }
 
     &.link--underline {
-        text-decoration: underline;
+      text-decoration: underline;
     }
   }
 
   .social-buttons {
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: breakpoint("desktop")) {
+      width: 100%;
+      justify-content: center;
+
+      .button--social {
+        width: 100%;
+        max-width: 250px;
+
+        margin-left: 0;
+        margin-bottom: to-rem(36px);
+
+        &:last-of-type {
+          margin-left: 20px;
+        }
+      }
+    }
   }
-  
+
   .last-column {
     display: flex;
 
@@ -78,8 +123,24 @@
     display: flex;
     align-items: center;
 
+    @media (max-width: breakpoint("desktop")) {
+      justify-content: center;
+    }
+
     .link {
-        margin-right: to-rem(35px);
+      margin-right: to-rem(35px);
+
+      @media (max-width: breakpoint("desktop")) {
+        margin-right: to-rem(12px);
+        font-size: 20px;
+      }
+
+      img {
+        @media (max-width: breakpoint("desktop")) {
+          width: to-rem(28px);
+          display: inline-block;
+        }
+      }
     }
   }
 }

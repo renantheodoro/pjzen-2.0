@@ -3,7 +3,7 @@
     <div class="container">
       <div class="content__row">
         <!--  COLUNA 1 -->
-        <div class="content__column column--4 column-desktop--5">
+        <div class="content__column column--2 column-desktop--5">
           <img
             src="@/assets/images/svg/icons/logo-footer.svg"
             alt="Logo footer"
@@ -12,18 +12,36 @@
 
           <h2>Você tranquilo, <br /><strong>zen.</strong></h2>
 
-          <p class="legend">
+          <p class="legend only-desktop">
             COPYRIGHT © 2022 | TODOS OS DIREITOS RESERVADOS | PJZEN <br />
             APOIO ADMINISTRATIVO LTDA | CNPJ: 46.138.201/0001-50
           </p>
         </div>
 
         <!--  COLUNA 2 -->
-        <div class="content__column column--4 column-desktop--3">
+        <div class="content__column column--2 column-desktop--3">
           <h3 class="link link--title">Páginas</h3>
 
-          <router-link to="" class="link">Home</router-link>
-          <router-link to="" class="link">Quanto custa</router-link>
+          <router-link :to="{ name: 'home' }" class="link">Home</router-link>
+          <router-link :to="{ name: 'price-page' }" class="link"
+            >Quanto custa</router-link
+          >
+        </div>
+
+        <div class="content__column column--4 lets-talk only-mobile">
+          <router-link to="" class="link link--underline"
+            >Vamos conversar
+            <img
+              src="@/assets/images/svg/icons/icon-arrow_right.svg"
+              alt="Arrow right"
+          /></router-link>
+
+          <router-link to="">
+            <img
+              src="@/assets/images/svg/icons/icon-chat-circle.svg"
+              alt="chat circle"
+            />
+          </router-link>
         </div>
 
         <!--  COLUNA 3 -->
@@ -63,7 +81,7 @@
             </router-link>
           </div>
 
-          <div class="lets-talk">
+          <div class="lets-talk only-desktop">
             <router-link to="" class="link link--underline"
               >Vamos conversar
               <img
@@ -78,6 +96,11 @@
               />
             </router-link>
           </div>
+
+          <p class="legend only-mobile">
+            COPYRIGHT © 2022 | TODOS OS DIREITOS RESERVADOS | PJZEN <br />
+            APOIO ADMINISTRATIVO LTDA | CNPJ: 46.138.201/0001-50
+          </p>
         </div>
       </div>
     </div>

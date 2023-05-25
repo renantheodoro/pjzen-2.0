@@ -1,13 +1,13 @@
 // query
 .only-desktop {
   @media (max-width: breakpoint("max-desktop")) {
-    display: none;
+    display: none !important;
   }
 }
 
 .only-mobile {
   @media screen and (min-width: breakpoint("desktop")) {
-    display: none;
+    display: none !important;
   }
 }
 

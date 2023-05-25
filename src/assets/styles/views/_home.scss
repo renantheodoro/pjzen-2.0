@@ -1,56 +1,68 @@
 .section-default__card--how-it-works {
-  .section-default__card__image {
-    display: block;
+  .divider {
+    margin-top: to-rem(22px);
+    margin-bottom: to-rem(39px);
   }
-}
 
-.section-default__card--testimonials {
-  .section-default__card--testimonials__header {
-    display: flex;
-    align-items: center;
-    margin-bottom: to-rem(52px);
+  .section-default__card__image {
+    margin: 0 auto;
+    display: block;
 
-    h2 {
-      width: calc(100% - 250px);
-      margin-bottom: 0;
-    }
-
-    .button {
-      font-size: to-rem(20px);
-      line-height: to-rem(25px);
-
-      padding: to-rem(13px) to-rem(38px);
-
-      width: to-rem(250px);
-      display: block;
+    @media (max-width: breakpoint("desktop")) {
+      margin-top: to-rem(50px);
     }
   }
 }
 
 .our-services {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
 
   .our-services__content {
-    padding: to-rem(16px) to-rem(20px);
+    padding: to-rem(16px) to-rem(8px);
     background: palette("icon", "background");
     border-radius: 8px;
 
     display: flex;
     align-items: flex-start;
 
+    @media (max-width: breakpoint("desktop")) {
+      &.our-services__content--mobile-hidden {
+        display: none;
+
+        &.open {
+          display: flex;
+        }
+      }
+    }
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      padding: to-rem(16px) to-rem(20px);
+    }
+
     .our-services__content__icon {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: flex-start;
 
-      width: to-rem(30px);
-      height: to-rem(30px);
+      height: to-rem(34px);
 
-      margin-right: to-rem(18px);
+      margin-right: to-rem(6px);
+
+      @media screen and (min-width: breakpoint("desktop")) {
+        width: to-rem(30px);
+        height: to-rem(30px);
+        align-items: center;
+        margin-right: to-rem(18px);
+      }
     }
 
     .our-services__content__text {
@@ -58,13 +70,18 @@
 
       h4 {
         font-weight: 700;
-        font-size: 1rem;
-        line-height: 92.6%;
+        font-size: to-rem(14px);
         text-transform: uppercase;
+        line-height: 110%;
 
         color: palette("purple");
 
-        margin-bottom: to-rem(12px);
+        margin-bottom: to-rem(18px);
+
+        @media screen and (min-width: breakpoint("desktop")) {
+          font-size: 1rem;
+          margin-bottom: to-rem(12px);
+        }
       }
 
       p {
@@ -77,10 +94,12 @@
 }
 
 .content-icon-columns {
-  .content__row {
-    background-image: url("@/assets/images/svg/section-steps-background.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+  @media screen and (min-width: breakpoint("desktop")) {
+    .content__row {
+      background-image: url("@/assets/images/svg/section-steps-background.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 
   @media (max-width: breakpoint("max-desktop")) {
@@ -93,9 +112,12 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    margin-bottom: 2rem;
+    margin-bottom: to-rem(50px);
 
-    padding-bottom: to-rem(150px);
+    @media screen and (min-width: breakpoint("desktop")) {
+      padding-bottom: to-rem(150px);
+      margin-bottom: 2rem;
+    }
 
     .content-icon-columns__item__icon {
       padding: to-rem(22px);
@@ -157,10 +179,17 @@
 
 .plans-section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 25px;
-  grid-row-gap: 0px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 3fr;
+  grid-column-gap: 0;
+  grid-row-gap: 62px;
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 0px;
+  }
 
   .plans-section__card {
     background-color: palette("white");
@@ -262,13 +291,13 @@
       font-size: to-rem(14px);
       line-height: 1rem;
       text-align: center;
+
+      @media (max-width: breakpoint("desktop")) {
+        max-width: 208px;
+      }
     }
 
     .divider {
-      width: 100%;
-      height: 1px;
-      background-color: #e0e0e0;
-
       margin-top: to-rem(25px);
       margin-bottom: to-rem(46px);
     }
@@ -294,11 +323,7 @@
   }
 }
 
-.plans-link {
-  font-weight: 400;
-  font-size: to-rem(24px);
-  line-height: to-rem(30px);
-
+.blue-link {
   text-decoration-line: underline;
 
   color: #4380e5;
@@ -308,13 +333,22 @@
   text-align: center;
 
   display: block;
+
+  font-size: 20px;
+  line-height: 25px;
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    font-weight: 400;
+    font-size: to-rem(24px);
+    line-height: to-rem(30px);
+  }
 }
 
 .section-default--plans {
   z-index: 3;
 }
 
-.section-default--testimonials {
+.home .section-default--testimonials {
   .eclipse--pink {
     width: to-rem(1133px);
     height: to-rem(1133px);
@@ -335,46 +369,10 @@
     top: 480px;
     left: 50%;
   }
+}
 
-  .testimonials {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 63px;
-    grid-row-gap: 0px;
-
-    .testimonials__card {
-      border-radius: 10px;
-      overflow: hidden;
-
-      position: relative;
-
-      cursor: pointer;
-
-      &::after {
-        content: "";
-        display: block;
-
-        width: to-rem(52px);
-        height: to-rem(52px);
-
-        background-image: url("@/assets/images/svg/icons/icon-play-circle.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-
-        position: absolute;
-
-        top: 50%;
-        left: 50%;
-
-        transform: translate(-50%, -50%);
-
-        z-index: 2;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
+.characters-section {
+  @media screen and (min-width: breakpoint("desktop")) {
+    padding-top: 0;
   }
 }

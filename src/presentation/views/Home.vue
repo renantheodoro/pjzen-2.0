@@ -1,45 +1,20 @@
 <template>
   <main class="home">
-    <section class="main-section">
-      <div class="eclipse eclipse--orange"></div>
-      <div class="eclipse eclipse--green"></div>
+    <MainSection imageUrl="home-main_section">
+      <h1>Contabilidade digital especialista em profissionais PJ</h1>
+      <p>
+        Seu tempo é muito importante para cuidar de tudo sozinho.
+        <br />Deixe a burocracia com a gente
+      </p>
+    </MainSection>
 
-      <div class="container">
-        <div class="content__row content__row--align-center">
-          <div class="content__column column--4 column-desktop--7">
-            <h1>Contabilidade digital especialista em profissionais PJ</h1>
-            <p>
-              Seu tempo é muito importante para cuidar de tudo sozinho.
-              <br />Deixe a burocracia com a gente
-            </p>
-            <div class="content__row">
-              <router-link to="" class="button button--outline">
-                Trocar de contador
-              </router-link>
-              <router-link to="" class="button button--primary">
-                Abra sua empresa grátis
-              </router-link>
-            </div>
-          </div>
-          <div class="content__column column--4 column-desktop--5">
-            <img
-              src="@/assets/images/svg/home-main_section.svg"
-              alt="Home main section"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="section-default section-default--no-padding-top characters-section"
-    >
+    <section class="section-default characters-section">
       <div class="container">
         <h2 class="section-default__title">Pra quem é a PJzen</h2>
 
         <div class="characters-carousel">
           <carousel
-            :items-to-show="5"
+            :items-to-show="isMobile ? 2.5 : 5"
             :autoplay="2000"
             :pauseAutoplayOnHover="true"
             :wrapAround="true"
@@ -93,9 +68,12 @@
               <img
                 src="@/assets/images/svg/home-in_practice.svg"
                 alt="Na prática"
-                class="section-default__card__image"
+                class="section-default__card__image only-desktop"
               />
             </div>
+
+            <div class="divider only-mobile"></div>
+
             <div class="content__column column--4 column-desktop--6">
               <h3>O que nós fazemos</h3>
 
@@ -165,6 +143,12 @@
                 </div>
                 <div class="item-content__text">Sua contabilidade completa</div>
               </div>
+
+              <img
+                src="@/assets/images/svg/home-in_practice.svg"
+                alt="Na prática"
+                class="section-default__card__image only-mobile"
+              />
             </div>
           </div>
         </div>
@@ -254,7 +238,10 @@
             </div>
           </div>
 
-          <div class="our-services__content">
+          <div
+            class="our-services__content our-services__content--mobile-hidden"
+            :class="{ open: isServicesOpened }"
+          >
             <div class="our-services__content__icon">
               <img
                 src="@/assets/images/svg/icons/icon-file-contract.svg"
@@ -267,7 +254,10 @@
             </div>
           </div>
 
-          <div class="our-services__content">
+          <div
+            class="our-services__content our-services__content--mobile-hidden"
+            :class="{ open: isServicesOpened }"
+          >
             <div class="our-services__content__icon">
               <img
                 src="@/assets/images/svg/icons/icon-chart-line-up.svg"
@@ -280,7 +270,10 @@
             </div>
           </div>
 
-          <div class="our-services__content">
+          <div
+            class="our-services__content our-services__content--mobile-hidden"
+            :class="{ open: isServicesOpened }"
+          >
             <div class="our-services__content__icon">
               <img
                 src="@/assets/images/svg/icons/icon-newspaper.svg"
@@ -293,7 +286,10 @@
             </div>
           </div>
 
-          <div class="our-services__content">
+          <div
+            class="our-services__content our-services__content--mobile-hidden"
+            :class="{ open: isServicesOpened }"
+          >
             <div class="our-services__content__icon">
               <img
                 src="@/assets/images/svg/icons/icon-ring-diamond.svg"
@@ -306,7 +302,10 @@
             </div>
           </div>
 
-          <div class="our-services__content">
+          <div
+            class="our-services__content our-services__content--mobile-hidden"
+            :class="{ open: isServicesOpened }"
+          >
             <div class="our-services__content__icon">
               <img
                 src="@/assets/images/svg/icons/icon-eye.svg"
@@ -319,7 +318,10 @@
             </div>
           </div>
 
-          <div class="our-services__content">
+          <div
+            class="our-services__content our-services__content--mobile-hidden"
+            :class="{ open: isServicesOpened }"
+          >
             <div class="our-services__content__icon">
               <img
                 src="@/assets/images/svg/icons/icon-memo-pad.svg"
@@ -332,6 +334,14 @@
             </div>
           </div>
         </div>
+
+        <a
+          href="#"
+          @click.prevent="isServicesOpened = !isServicesOpened"
+          class="blue-link"
+        >
+          <strong>Ver todos os serviços</strong>
+        </a>
       </div>
     </section>
 
@@ -407,7 +417,10 @@
             <h4>R$99</h4>
             <legend>POR MÊS</legend>
 
-            <router-link to="" class="button button--primary button--orange">
+            <router-link
+              :to="{ name: 'price-page' }"
+              class="button button--primary button--orange"
+            >
               COMECE AGORA
             </router-link>
 
@@ -457,7 +470,10 @@
             <h4>R$199</h4>
             <legend>POR MÊS</legend>
 
-            <router-link to="" class="button button--primary button--blue">
+            <router-link
+              :to="{ name: 'price-page' }"
+              class="button button--primary button--blue"
+            >
               COMECE AGORA
             </router-link>
 
@@ -507,7 +523,10 @@
             <h4>R$299</h4>
             <legend>POR MÊS</legend>
 
-            <router-link to="" class="button button--primary button--blue-dark">
+            <router-link
+              :to="{ name: 'price-page' }"
+              class="button button--primary button--blue-dark"
+            >
               COMECE AGORA
             </router-link>
 
@@ -606,58 +625,15 @@
           </div>
         </div>
 
-        <a href="#" class="plans-link"> Saber mais sobre os planos </a>
+        <router-link :to="{ name: 'price-page' }" class="blue-link">
+          Saber mais sobre os planos</router-link
+        >
       </div>
     </section>
 
-    <div class="section-default section-default--testimonials">
-      <div class="eclipse eclipse--pink"></div>
-      <div class="eclipse eclipse--green"></div>
-      <div class="eclipse eclipse--purple"></div>
+    <Testimonials />
 
-      <div class="container">
-        <div class="section-default__card section-default__card--testimonials">
-          <div class="section-default__card--testimonials__header">
-            <h2 class="section-default__title">
-              Veja o <strong>depoimento</strong> dos membros que ganharam mais
-              tempo no dia a dia
-            </h2>
-
-            <router-link to="" class="button button--outline">
-              Ver mais histórias
-            </router-link>
-          </div>
-
-          <div class="testimonials">
-            <div @click="openModal()" class="testimonials__card">
-              <img src="@/assets/images/jpg/testimonial-example.jpeg" alt="" />
-            </div>
-            <div @click="openModal()" class="testimonials__card">
-              <img src="@/assets/images/jpg/testimonial-example.jpeg" alt="" />
-            </div>
-            <div @click="openModal()" class="testimonials__card">
-              <img src="@/assets/images/jpg/testimonial-example.jpeg" alt="" />
-            </div>
-            <div @click="openModal()" class="testimonials__card">
-              <img src="@/assets/images/jpg/testimonial-example.jpeg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="section-default">
-      <div class="container">
-        <div class="call-to-action">
-          <h2>Fique tranquilo e deixe <br />a burocracia conosco</h2>
-          <router-link to="" class="button button--primary">
-            Fale com a gente
-          </router-link>
-
-          <img src="@/assets/images/svg/home-main_section_line.svg" alt="" />
-        </div>
-      </div>
-    </section>
+    <CallToAction />
 
     <Modal ref="testimonialsModal">
       <video controls>
@@ -674,6 +650,9 @@
 import { Carousel, Slide } from "vue3-carousel";
 
 import Modal from "@/presentation/components/Modal.vue";
+import MainSection from "../modules/MainSection.vue";
+import Testimonials from "../modules/Testimonials.vue";
+import CallToAction from "../modules/CallToAction.vue";
 
 export default {
   name: "app-home",
@@ -722,6 +701,7 @@ export default {
           text: "E muito mais",
         },
       ],
+      isServicesOpened: false,
     };
   },
 
@@ -729,9 +709,15 @@ export default {
     openFormNav(event) {
       this.$emit("openFormNav", event);
     },
+  },
 
-    openModal() {
-      this.$refs.testimonialsModal.open();
+  computed: {
+    isMobile() {
+      if (window.screen.width <= 767) {
+        return true;
+      } else {
+        return false;
+      }
     },
   },
 
@@ -739,6 +725,9 @@ export default {
     Carousel,
     Slide,
     Modal,
+    MainSection,
+    Testimonials,
+    CallToAction,
   },
 };
 </script>
