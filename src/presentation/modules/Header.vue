@@ -48,8 +48,18 @@
     <nav class="header--mobile__content" :class="{ open: isMenuOpened }">
       <div class="container flex-center flex-column">
         <ul class="header--mobile__content__links">
-          <li><router-link to="">Home</router-link></li>
-          <li><router-link to="">Quanto custa?</router-link></li>
+          <li>
+            <router-link @click="isMenuOpened = false" :to="{ name: 'home' }"
+              >Home</router-link
+            >
+          </li>
+          <li>
+            <router-link
+              @click="isMenuOpened = false"
+              :to="{ name: 'price-page' }"
+              >Quanto custa?</router-link
+            >
+          </li>
         </ul>
 
         <router-link to="" class="filled-button button button--primary">
@@ -60,7 +70,7 @@
         </router-link>
 
         <div class="social-buttons">
-          <router-link to="" class="button button--social">
+          <router-link target="_blank" to="" class="button button--social">
             <svg
               width="22"
               height="22"
@@ -76,7 +86,7 @@
 
             Instagram
           </router-link>
-          <router-link to="" class="button button--social">
+          <router-link target="_blank" to="" class="button button--social">
             <svg
               width="21"
               height="22"
