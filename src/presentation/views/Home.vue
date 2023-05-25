@@ -338,7 +338,7 @@
         <a
           href="#"
           @click.prevent="isServicesOpened = !isServicesOpened"
-          class="blue-link"
+          class="blue-link only-mobile"
         >
           <strong>Ver todos os serviços</strong>
         </a>
