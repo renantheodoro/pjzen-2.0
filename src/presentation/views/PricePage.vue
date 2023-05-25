@@ -356,19 +356,19 @@
               <tr>
                 <td colspan="2">Regime tributário</td>
                 <td>
-                  MEI,
+                  MEI,<br/>
                   Simples nacional
                 </td>
                 <td>
-                  MEI,
+                  MEI,<br/>
                   Simples nacional
                 </td>
                 <td>
-                  MEI,
+                  MEI,<br/>
                   Simples nacional
                 </td>
                 <td>
-                  MEI,
+                  MEI,<br/>
                   Simples nacional
                 </td>
               </tr>
@@ -401,7 +401,7 @@
 
             <tbody>
               <tr>
-                <td colspan="2">Taxa de abertura para São Paulo/SP</td>
+                <td colspan="2">Taxa de abertura para <br/>São Paulo/SP</td>
                 <td>Grátis</td>
                 <td>Grátis</td>
                 <td>Grátis</td>

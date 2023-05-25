@@ -111,7 +111,7 @@
         margin-bottom: to-rem(50px);
       }
 
-      tr:nth-child(odd) td {
+      &:not(.start-with-purple-row):nth-child(odd) td {
         padding-top: to-rem(22px);
         padding-bottom: to-rem(22px);
       }
@@ -124,10 +124,6 @@
         tr:nth-child(even) td {
           padding-top: to-rem(22px);
           padding-bottom: to-rem(22px);
-        }
-        tr:nth-child(odd) td {
-          padding-top: 0;
-          padding-bottom: 0;
         }
 
         tbody tr:nth-child(odd) {
