@@ -735,7 +735,7 @@
               <div class="input-columns">
                 <div class="input-field">
                   <label for="">Número do cartão</label>
-                  <input type="text" />
+                  <input type="text" v-mask="['#### #### #### ####']" placeholder="1234 5678 1234 5678" />
                 </div>
                 <div class="input-field">
                   <label for="">Nome no cartão</label>
@@ -746,11 +746,11 @@
               <div class="input-columns">
                 <div class="input-field">
                   <label for="">Data de Validade</label>
-                  <input type="text" />
+                  <input type="text" v-mask="['##/##']" placeholder="MM/AA" />
                 </div>
                 <div class="input-field">
                   <label for="">CVC</label>
-                  <input type="text" />
+                  <input type="text" v-mask="['###']" placeholder="123" />
                 </div>
               </div>
             </div>
