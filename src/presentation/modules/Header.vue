@@ -62,10 +62,10 @@
           </li>
         </ul>
 
-        <router-link to="" class="filled-button button button--primary">
+        <router-link :to="{name: 'open-company'}" class="filled-button button button--primary">
           Abra sua empresa grátis
         </router-link>
-        <router-link to="" class="filled-button button button--outline">
+        <router-link :to="{name: 'change-counter'}" class="filled-button button button--outline">
           Trocar de contador
         </router-link>
 

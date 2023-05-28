@@ -3,6 +3,9 @@ $headerMobileHeight: to-rem(120px);
 
 #app {
   overflow-x: hidden;
+}
+
+main.page {
   padding-top: $headerMobileHeight;
 
   @media (max-width: breakpoint("max-desktop")) {

@@ -1,5 +1,7 @@
 <template>
-  <main class="home">
+  <Header />
+
+  <main class="home page">
     <MainSection imageUrl="home-main_section">
       <h1>Contabilidade digital especialista em profissionais PJ</h1>
       <p>
@@ -645,9 +647,13 @@
       </video>
     </Modal>
   </main>
+
+  <Footer />
 </template>
 <script>
 import { Carousel, Slide } from "vue3-carousel";
+import Header from "@/presentation/modules/Header.vue";
+import Footer from "@/presentation/modules/Footer.vue";
 
 import Modal from "@/presentation/components/Modal.vue";
 import MainSection from "../modules/MainSection.vue";
@@ -728,6 +734,8 @@ export default {
     MainSection,
     Testimonials,
     CallToAction,
+    Header,
+    Footer,
   },
 };
 </script>

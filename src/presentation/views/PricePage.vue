@@ -1,5 +1,6 @@
 <template lang="">
-  <main class="price-page">
+  <Header />
+  <main class="page price-page">
     <MainSection imageUrl="price-page-main_section">
       <h1>Fique tranquilo e deixe tudo conosco</h1>
       <p>Desde a Abertura até a Entrega do Imposto de Renda</p>
@@ -90,7 +91,9 @@
             </tbody>
           </table>
 
-          <table class="table-prices table-prices--comparison start-with-purple-row">
+          <table
+            class="table-prices table-prices--comparison start-with-purple-row"
+          >
             <thead>
               <tr>
                 <th colspan="2">
@@ -356,19 +359,19 @@
               <tr>
                 <td colspan="2">Regime tributário</td>
                 <td>
-                  MEI,<br/>
+                  MEI,<br />
                   Simples nacional
                 </td>
                 <td>
-                  MEI,<br/>
+                  MEI,<br />
                   Simples nacional
                 </td>
                 <td>
-                  MEI,<br/>
+                  MEI,<br />
                   Simples nacional
                 </td>
                 <td>
-                  MEI,<br/>
+                  MEI,<br />
                   Simples nacional
                 </td>
               </tr>
@@ -401,7 +404,7 @@
 
             <tbody>
               <tr>
-                <td colspan="2">Taxa de abertura para <br/>São Paulo/SP</td>
+                <td colspan="2">Taxa de abertura para <br />São Paulo/SP</td>
                 <td>Grátis</td>
                 <td>Grátis</td>
                 <td>Grátis</td>
@@ -535,6 +538,8 @@
     <CallToAction />
   </main>
 
+  <Footer />
+
   <Modal ref="testimonialsModal">
     <video controls>
       <source src="@/assets/videos/testimonial-example.mp4" type="video/mp4" />
@@ -543,6 +548,9 @@
   </Modal>
 </template>
 <script>
+import Header from "@/presentation/modules/Header.vue";
+import Footer from "@/presentation/modules/Footer.vue";
+
 import Modal from "@/presentation/components/Modal.vue";
 import MainSection from "../modules/MainSection.vue";
 import Testimonials from "../modules/Testimonials.vue";
@@ -644,6 +652,8 @@ export default {
     Testimonials,
     Modal,
     CallToAction,
+    Header,
+    Footer,
   },
 };
 </script>

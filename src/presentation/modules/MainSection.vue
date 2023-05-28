@@ -8,10 +8,16 @@
         <div class="content__column column--4 column-desktop--7">
           <slot />
           <div class="content__row">
-            <router-link to="" class="button button--outline">
+            <router-link
+              :to="{ name: 'change-counter' }"
+              class="button button--outline"
+            >
               Trocar de contador
             </router-link>
-            <router-link to="" class="button button--primary">
+            <router-link
+              :to="{ name: 'open-company' }"
+              class="button button--primary"
+            >
               Abra sua empresa grátis
             </router-link>
           </div>
