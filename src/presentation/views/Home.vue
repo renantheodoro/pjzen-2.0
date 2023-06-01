@@ -414,14 +414,19 @@
         <h2 class="section-default__title">Planos e Preços</h2>
 
         <div class="plans-section">
-          <div class="plans-section__card plans-section__card--orange">
-            <h3>Zen 1</h3>
-            <h4>R$99</h4>
-            <legend>POR MÊS</legend>
+          <div
+            v-for="(plan, index) in plansList"
+            :key="index"
+            :class="[`plans-section__card plans-section__card--${plan.color}`]"
+          >
+            <h3>{{ plan.name }}</h3>
+            <h4 v-if="plan.price !== null">R${{ plan.price }}</h4>
+            <h5 v-if="plan.priceText">{{ plan.priceText }}</h5>
+            <legend>{{ plan.frequency }}</legend>
 
             <router-link
               :to="{ name: 'price-page' }"
-              class="button button--primary button--orange"
+              :class="`button button--primary button--${plan.color}`"
             >
               COMECE AGORA
             </router-link>
@@ -429,199 +434,12 @@
             <div class="divider"></div>
 
             <ul class="plans-section__card__list">
-              <li>
+              <li v-for="(included, index) in plan.included" :key="index">
                 <img
                   src="@/assets/images/svg/icons/icon-check.svg"
                   alt="Icon check"
                 />
-                <span>Contabilidade completa</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Processo de abertura gratis</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Emissão de NFs pela PJZen</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Até 2 sócios (Pró-Labore)</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Até 25k de faturamento/mês</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="plans-section__card plans-section__card--blue">
-            <h3>Zen 2</h3>
-            <h4>R$199</h4>
-            <legend>POR MÊS</legend>
-
-            <router-link
-              :to="{ name: 'price-page' }"
-              class="button button--primary button--blue"
-            >
-              COMECE AGORA
-            </router-link>
-
-            <div class="divider"></div>
-
-            <ul class="plans-section__card__list">
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Contabilidade completa</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Processo de abertura gratis</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Emissão de NFs pela PJZen</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Até 2 sócios (Pró-Labore)</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Até 25k de faturamento/mês</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="plans-section__card plans-section__card--blue-dark">
-            <h3>Zen 3</h3>
-            <h4>R$299</h4>
-            <legend>POR MÊS</legend>
-
-            <router-link
-              :to="{ name: 'price-page' }"
-              class="button button--primary button--blue-dark"
-            >
-              COMECE AGORA
-            </router-link>
-
-            <div class="divider"></div>
-
-            <ul class="plans-section__card__list">
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Contabilidade completa</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Processo de abertura gratis</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Emissão de NFs pela PJZen</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Até 2 sócios (Pró-Labore)</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Até 25k de faturamento/mês</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="plans-section__card plans-section__card--blue-darkest">
-            <h3>Custom</h3>
-            <h5>On-Demand</h5>
-            <legend>POR MÊS</legend>
-
-            <router-link
-              to=""
-              class="button button--primary button--blue-darkest"
-            >
-              ENTRE EM CONTATO
-            </router-link>
-
-            <div class="divider"></div>
-
-            <ul class="plans-section__card__list">
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Contabilidade completa</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Processo de abertura gratis</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Emissão de NFs pela PJZen</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Até 2 sócios (Pró-Labore)</span>
-              </li>
-              <li>
-                <img
-                  src="@/assets/images/svg/icons/icon-check.svg"
-                  alt="Icon check"
-                />
-                <span>Até 25k de faturamento/mês</span>
+                <span>{{ included }}</span>
               </li>
             </ul>
           </div>
@@ -651,6 +469,8 @@
   <Footer />
 </template>
 <script>
+import plansList from "@/content/plans.json";
+
 import { Carousel, Slide } from "vue3-carousel";
 import Header from "@/presentation/modules/Header.vue";
 import Footer from "@/presentation/modules/Footer.vue";
@@ -665,6 +485,8 @@ export default {
 
   data() {
     return {
+      plansList: plansList,
+
       charactersCarousel: [
         {
           image: "character-doctor",

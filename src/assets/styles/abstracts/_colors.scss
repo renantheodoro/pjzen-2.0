@@ -5,9 +5,10 @@
 
 $palette: (
   // Base colors
-  "white": (
-    "base": #fff,
-  ),
+  "white":
+    (
+      "base": #fff,
+    ),
   "black": (
     "base": #000,
   ),
@@ -30,27 +31,27 @@ $palette: (
     "base": #353535,
     "light": #4b4b4b,
     "extra-light": #949494,
-    "blue": #3782EF,
+    "blue": #3782ef,
   ),
   "background": (
     "base": #eef6f6,
   ),
   "button": (
-    "primary": #4380E5,
-    "primary-hover": #004FC2,
+    "primary": #4380e5,
+    "primary-hover": #004fc2,
     "orange": #ee783c,
-    "orange-hover": #A53800,
-    "blue": #3782EF,
-    "blue-hover": #004FC2,
-    "blue-dark": #2B66BD,
+    "orange-hover": #a53800,
+    "blue": #3782ef,
+    "blue-hover": #004fc2,
+    "blue-dark": #2b66bd,
     "blue-dark-hover": #002459,
-    "blue-darkest": #3B5170,
+    "blue-darkest": #3b5170,
     "blue-darkest-hover": #051224,
   ),
-
-  // Project colors
-  "icon":
-    (
-      "background": #d9edf8,
-    )
+  "icon": (
+    "background": #d9edf8,
+  ),
+  "error": (
+    "base": #db0000,
+  )
 );

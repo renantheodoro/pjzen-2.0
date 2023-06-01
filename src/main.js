@@ -8,6 +8,8 @@ import App from "./App.vue";
 import * as VueRouter from "vue-router";
 import routes from "./routes";
 import VueLazyload from "vue-lazyload";
+import axios from "axios";
+import VueAxios from "vue-axios";
 
 import { Collapse } from "vue-collapsed";
 
@@ -48,6 +50,7 @@ app.config.globalProperties.$getPngUrl = (img) => {
 // App Usages
 app.use(router);
 app.use(VueLazyload);
+app.use(VueAxios, axios);
 
 // App Components
 app.component(Collapse, "Collapse");
