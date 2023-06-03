@@ -12,7 +12,11 @@
             tempo no dia a dia
           </h2>
 
-          <router-link to="" class="button button--outline only-desktop">
+          <router-link
+            to="https://www.instagram.com/vcpjzen/reels/"
+            target="_blank"
+            class="button button--outline only-desktop"
+          >
             Ver mais histórias
           </router-link>
         </div>
@@ -32,7 +36,11 @@
           </div>
         </div>
 
-        <router-link to="" class="button button--outline only-mobile">
+        <router-link
+          to="https://www.instagram.com/vcpjzen/reels/"
+          target="_blank"
+          class="button button--outline only-mobile"
+        >
           Ver mais histórias
         </router-link>
       </div>

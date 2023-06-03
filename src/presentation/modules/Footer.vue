@@ -47,7 +47,7 @@
         <!--  COLUNA 3 -->
         <div class="last-column content__column column--4 column-desktop--4">
           <div class="social-buttons">
-            <router-link target="_blank" to="" class="button button--social">
+            <router-link target="_blank" to="https://instagram.com/vcpjzenLi" class="button button--social">
               <svg
                 width="22"
                 height="22"
@@ -63,7 +63,11 @@
 
               Instagram
             </router-link>
-            <router-link target="_blank" to="" class="button button--social">
+            <router-link
+              target="_blank"
+              to="https://www.linkedin.com/company/pjzen/"
+              class="button button--social"
+            >
               <svg
                 width="21"
                 height="22"

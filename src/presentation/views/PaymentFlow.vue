@@ -1052,7 +1052,6 @@ export default {
     getPJZenPlans() {
       const vindiPJZenUrlBase = "https://app.vindi.com.br/api/";
       const urlPlans = "v1/plans";
-      // const params = "?page=1&per_page=25&sort_by=created_at&sort_order=asc";
 
       const headers = {
         "Access-Control-Allow-Origin": "*",
@@ -1327,7 +1326,7 @@ export default {
   },
 
   created() {
-    // this.getPJZenPlans();
+    this.getPJZenPlans();
   },
 
   components: { Loader },

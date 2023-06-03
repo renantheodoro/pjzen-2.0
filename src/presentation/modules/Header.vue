@@ -17,7 +17,12 @@
         </div>
 
         <div class="content__column column-desktop--2">
-          <a href="#" class="button button--primary">Login</a>
+          <router-link
+            to="https://www.pjzen.com/acesso"
+            target="_blank"
+            class="button button--primary"
+            >Login</router-link
+          >
         </div>
       </div>
     </div>
@@ -62,15 +67,25 @@
           </li>
         </ul>
 
-        <router-link :to="{name: 'open-company'}" class="filled-button button button--primary">
+        <router-link
+          :to="{ name: 'open-company' }"
+          class="filled-button button button--primary"
+        >
           Abra sua empresa grátis
         </router-link>
-        <router-link :to="{name: 'change-counter'}" class="filled-button button button--outline">
+        <router-link
+          :to="{ name: 'change-counter' }"
+          class="filled-button button button--outline"
+        >
           Trocar de contador
         </router-link>
 
         <div class="social-buttons">
-          <router-link target="_blank" to="" class="button button--social">
+          <router-link
+            target="_blank"
+            to="https://instagram.com/vcpjzenLi"
+            class="button button--social"
+          >
             <svg
               width="22"
               height="22"
@@ -86,7 +101,11 @@
 
             Instagram
           </router-link>
-          <router-link target="_blank" to="" class="button button--social">
+          <router-link
+            target="_blank"
+            to="https://www.linkedin.com/company/pjzen/"
+            class="button button--social"
+          >
             <svg
               width="21"
               height="22"
