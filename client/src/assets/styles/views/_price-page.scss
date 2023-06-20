@@ -1,0 +1,255 @@
+.section-default--prices {
+  .eclipse--green {
+    width: to-rem(850px);
+    height: to-rem(850px);
+    top: 230px;
+    left: 50%;
+    z-index: 1;
+  }
+}
+
+.section-default__card--prices {
+  @media (max-width: breakpoint("desktop")) {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.price-page {
+  .table-prices {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+
+    @media (max-width: breakpoint("desktop")) {
+      min-width: 800px;
+    }
+
+    td > div {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    &.table-prices--plans {
+      margin-bottom: to-rem(46px);
+
+      @media screen and (min-width: breakpoint("desktop")) {
+        margin-bottom: to-rem(120px);
+      }
+
+      th,
+      td {
+        padding-left: to-rem(10px);
+        padding-right: to-rem(10px);
+      }
+
+      td {
+        text-align: right;
+      }
+
+      thead {
+        tr th {
+          font-weight: 800;
+          text-align: right;
+          line-height: 100%;
+          font-size: to-rem(22px);
+
+          padding-bottom: to-rem(10px);
+
+          @media screen and (min-width: breakpoint("desktop")) {
+            font-size: to-rem(28px);
+          }
+
+          &:nth-child(2) {
+            color: palette("button", "orange");
+          }
+
+          &:nth-child(3) {
+            color: palette("button", "blue");
+          }
+
+          &:nth-child(4) {
+            color: palette("button", "blue-dark");
+          }
+
+          &:nth-child(5) {
+            color: palette("button", "blue-darkest");
+          }
+        }
+      }
+
+      tbody {
+        span {
+          display: inline-block;
+          line-height: 100%;
+        }
+
+        tr {
+          &:nth-child(1) span {
+            height: 26px;
+          }
+          &:nth-child(2) span {
+            height: 30px;
+          }
+          &:nth-child(3) span {
+            height: 38px;
+          }
+        }
+
+        .table-prices--plans__price-bold {
+          font-weight: 700;
+          font-size: to-rem(28px);
+          text-align: center;
+
+          color: palette("text", "light");
+
+          @media screen and (min-width: breakpoint("desktop")) {
+            font-size: to-rem(32px);
+          }
+        }
+
+        .table-prices--plans__price-light {
+          font-weight: 400;
+          font-size: to-rem(20px);
+          text-align: center;
+
+          color: palette("text", "light");
+
+          @media screen and (min-width: breakpoint("desktop")) {
+            font-size: to-rem(24px);
+          }
+        }
+
+        .button {
+          width: 100%;
+          padding: to-rem(10px);
+
+          font-size: to-rem(14px);
+          line-height: 17px;
+        }
+      }
+    }
+
+    &.table-prices--comparison {
+      border-spacing: 30px;
+
+      &:not(:last-of-type) {
+        margin-bottom: to-rem(50px);
+      }
+
+      &:not(.start-with-purple-row):nth-child(odd) td {
+        padding-top: to-rem(22px);
+        padding-bottom: to-rem(22px);
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f1f1ff;
+      }
+
+      &.start-with-purple-row {
+        tr:nth-child(even) td {
+          padding-top: to-rem(22px);
+          padding-bottom: to-rem(22px);
+        }
+
+        tbody tr:nth-child(odd) {
+          background-color: #f1f1ff;
+        }
+
+        tbody tr:nth-child(even) {
+          background-color: transparent;
+        }
+      }
+
+      thead {
+        th {
+          padding-bottom: to-rem(22px);
+        }
+
+        .item-content {
+          margin-bottom: 0;
+        }
+
+        .item-content__text {
+          text-align: left;
+          font-size: to-rem(14px);
+          max-width: 77px;
+          font-weight: 700;
+
+          color: palette("text", "light");
+
+          @media screen and (min-width: breakpoint("desktop")) {
+            font-size: to-rem(20px);
+            max-width: 100%;
+          }
+        }
+      }
+
+      tbody {
+        tr td {
+          font-weight: 400;
+          font-size: to-rem(16px);
+          color: palette("text", "light");
+
+          text-align: center;
+          line-height: 92.6%;
+
+          padding: 1rem 0;
+
+          vertical-align: middle;
+
+          max-width: to-rem(130px);
+
+          @media (max-width: breakpoint("desktop")) {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+          }
+
+          @media screen and (min-width: breakpoint("desktop")) {
+            font-size: to-rem(18px);
+            max-width: 100%;
+          }
+
+          &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            text-align: left;
+            padding-left: 22px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-default--testimonials {
+    .eclipse--pink {
+      width: to-rem(1133px);
+      height: to-rem(1133px);
+      top: -210px;
+      right: 50%;
+    }
+
+    .eclipse--green {
+      width: to-rem(960px);
+      height: to-rem(960px);
+      top: 100%;
+      left: 50%;
+      z-index: 1;
+    }
+
+    .eclipse--purple {
+      width: to-rem(960px);
+      height: to-rem(960px);
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+    }
+  }
+}

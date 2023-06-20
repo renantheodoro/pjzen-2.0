@@ -1,0 +1,84 @@
+.v-collapse {
+  transition: ease 0.3s;
+}
+
+.section-default--faq {
+  .content__column {
+    @media (max-width: breakpoint("desktop")) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.faq-collapse {
+  margin-bottom: to-rem(20px);
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    margin-bottom: to-rem(46px);
+  }
+
+  .faq-collapse--faq__header {
+    width: 100%;
+
+    border: none;
+    border-bottom: 1px solid #bebebe;
+
+    background-color: transparent;
+
+    text-align: left;
+
+    font-family: $primary-font-stack;
+    font-weight: 700;
+    font-size: to-rem(20px);
+    color: palette("text", "light");
+
+    padding-top: to-rem(12px);
+    padding-bottom: to-rem(12px);
+
+    line-height: 100%;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: "";
+      margin-left: to-rem(30px);
+
+      background-image: url("@/assets/images/svg/icons/icon-angle-down.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: block;
+
+      width: to-rem(22px);
+      height: to-rem(8px);
+
+      transition: ease 0.3s;
+      transform: rotate(0deg);
+    }
+
+    &.isExpanded {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .faq-collapse--faq__content {
+    width: 100%;
+
+    p {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+      font-weight: 400;
+      font-size: t-rem(14px);
+      line-height: 152.6%;
+      color: palette("text", "light");
+
+      max-width: 90%;
+    }
+  }
+}

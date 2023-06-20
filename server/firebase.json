@@ -1,0 +1,32 @@
+{
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "rewrites": [
+        {
+          "source": "/get-plans",
+          "function": "app"
+        },
+        {
+          "source": "/get-payment-methods",
+          "function": "app"
+        },
+        {
+          "source": "/register-customer",
+          "function": "app"
+        },
+        {
+          "source": "/register-payment-profile",
+          "function": "app"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "plans": [
+    {
+      "id": 370988,
+      "name": "Plano Zen I",
+      "status": "active",
+      "interval_name": "Mensal",
+      "included": [
+        "Contabilidade completa",
+        "Processo de abertura grátis",
+        "Emissão de NFs pela PJZen",
+        "Até 2 sócios (Pró-Labore)",
+        "Até 25k de faturamento/mês"
+      ],
+      "plan_items": [
+        {
+          "id": 440985,
+          "product": {
+            "id": 1299545,
+            "name": "Zen I",
+            "unit": "Reais",
+            "status": "active",
+            "pricing_schema": {
+              "short_format": "R$ 99,00",
+              "price": "99.0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 372358,
+      "name": "Plano Zen II",
+      "status": "active",
+      "interval_name": "Mensal",
+      "included": [
+        "Contabilidade completa",
+        "Processo de abertura grátis",
+        "Emissão de NFs pela PJZen",
+        "Até 2 sócios (Pró-Labore)",
+        "Entre 25K e 50K de faturamento/mês"
+      ],
+      "plan_items": [
+        {
+          "id": 442587,
+          "product": {
+            "id": 1299548,
+            "name": "Zen II",
+            "unit": "Reais",
+            "status": "active",
+            "pricing_schema": {
+              "short_format": "R$ 199,00",
+              "price": "199.0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 372360,
+      "name": "Plano Zen III",
+      "status": "active",
+      "interval_name": "Mensal",
+      "included": [
+        "Contabilidade completa",
+        "Processo de abertura grátis",
+        "Emissão de NFs pela PJZen",
+        "Até 2 sócios (Pró-Labore)",
+        "Entre 50K e 100K de faturamento/mês"
+      ],
+      "plan_items": [
+        {
+          "id": 442589,
+          "product": {
+            "id": 1299549,
+            "name": "Zen III",
+            "unit": "Reais",
+            "status": "active",
+            "pricing_schema": {
+              "short_format": "R$ 299,00",
+              "price": "299.0"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
