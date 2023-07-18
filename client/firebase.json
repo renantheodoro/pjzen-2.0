@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "pjzen-v2",
+    "site": "pjzen-442be",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [

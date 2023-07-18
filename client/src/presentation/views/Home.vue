@@ -87,7 +87,7 @@
                   />
                 </div>
                 <div class="item-content__text">
-                  Calculo de guias de imposto, folha de pagamento e pró-labore
+                  Cálculo de guias de imposto, folha de pagamento e pró-labore
                 </div>
               </div>
               <div class="item-content">
