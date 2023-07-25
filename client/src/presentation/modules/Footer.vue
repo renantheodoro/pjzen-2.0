@@ -27,7 +27,7 @@
             >Quanto custa</router-link
           >
         </div>
-
+<!-- 
         <div class="content__column column--4 lets-talk only-mobile">
           <router-link to="" class="link link--underline"
             >Vamos conversar
@@ -42,7 +42,7 @@
               alt="chat circle"
             />
           </router-link>
-        </div>
+        </div> -->
 
         <!--  COLUNA 3 -->
         <div class="last-column content__column column--4 column-desktop--4">
@@ -107,12 +107,12 @@
     </div>
   </footer>
 
-  <router-link to="" class="lets-talk-chat-link">
+  <!-- <router-link to="" class="lets-talk-chat-link">
     <img
       src="@/assets/images/svg/icons/icon-chat-circle.svg"
       alt="chat circle"
     />
-  </router-link>
+  </router-link> -->
 </template>
 <script>
 export default {

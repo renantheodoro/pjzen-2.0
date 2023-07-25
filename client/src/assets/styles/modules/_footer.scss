@@ -145,17 +145,19 @@
   }
 }
 
-.lets-talk-chat-link {
-  position: fixed;
-  z-index: 998;
-  bottom: 30px;
-  right: calc((100% - 1272px) / 2);
+// .lets-talk-chat-link,
+[id^="popup"]
+  #bricks-component-hLZAjZ68zhvyAWN4hu76WQ-wrapper.rdstation-popup-position-bottom_right.floating-button.floating-button--close {
+  position: fixed !important;
+  z-index: 998 !important;
+  bottom: 30px !important;
+  right: calc((100% - 1272px) / 2) !important;
 
   @media screen and (max-width: 1290px) {
-    right: 5px;
+    right: 5px !important;
   }
 
   @media (max-width: breakpoint("desktop")) {
-    display: none;
+    // display: none;
   }
 }
